@@ -93,7 +93,7 @@ exports.addInterview = async (req, res, next) => {
             return res.status(400).json({success: false, message: `The user with ID ${req.user.id} has already made 3 interviews`});
         };
 
-        if (req.body.interviewDate < '2022-05-10T00:00:00.000+00:00' || req.body.interviewDate > '2022-05-13T23:59:59.999+00:00') {
+        if (req.body.interviewDate < '2022-05-09T23:59:59.999+00:00' || req.body.interviewDate > '2022-05-13T23:59:59.999+00:00') {
             return res.status(400).json({success: false, message: `Please choose a date during May 10th - 13th, 2022`});
         }
      
