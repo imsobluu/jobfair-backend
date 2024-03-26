@@ -5,6 +5,10 @@ const InterviewSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
+    name: {
+        type: String,
+        required: true
+    },
     user: {
         type: mongoose.Schema.ObjectId,
         ref: 'User',
